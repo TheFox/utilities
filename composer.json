@@ -1,6 +1,6 @@
 {
 	"name": "thefox/utilities",
-	"description": "Collection of usefull PHP utilities",
+	"description": "Collection of usefull PHP utilities.",
 	"type": "library",
 	"keywords": [
 		"utilities",
@@ -36,7 +36,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-master": "1.0.x-dev"
+			"dev-master": "1.1.x-dev"
 		}
 	}
 }
