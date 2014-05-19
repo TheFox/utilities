@@ -22,6 +22,7 @@
 		<testsuite name="My Test Suite">
 			<file>tests/Base58Test.php</file>
 			<!--<file>tests/BinTest.php</file>//-->
+			<file>tests/Filesystem.php</file>
 			<file>tests/HexTest.php</file>
 			<file>tests/RandTest.php</file>
 		</testsuite>
