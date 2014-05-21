@@ -5,15 +5,20 @@ namespace TheFox\Utilities;
 class Bin{
 	
 	public static function debugData($data){
-		fwrite(STDOUT, "ddd xx    b b b b  b b b b\n");
-		fwrite(STDOUT, "--- --    ----------------\n");
+		$charset = '^°!"$%&/()=?+*#\'-_.:,;<> ';
+		$charset .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		$charset .= 'abcdefghijklmnopqrstuvwxyz';
+		$charset .= '0123456789';
+		
+		fwrite(STDOUT, "c ddd xx    b b b b  b b b b\n");
+		fwrite(STDOUT, "- --- --    ----------------\n");
 		
 		$dataLen = strlen($data);
 		for($pos = 0; $pos < $dataLen; $pos++){
 			$char = $data[$pos];
 			$ascii = ord($char);
 			
-			fwrite(STDOUT, sprintf("%3d %02x    %d %d %d %d  %d %d %d %d\n",
+			fwrite(STDOUT, sprintf((strpos($charset, $char) === false ? ' ' : $char)." %3d %02x    %d %d %d %d  %d %d %d %d\n",
 				$ascii, $ascii,
 				($ascii & (1 << 7) ) > 0,
 				($ascii & (1 << 6) ) > 0,
