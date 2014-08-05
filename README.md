@@ -1,10 +1,6 @@
 # Utilities
 Collection of usefull PHP utilities.
 
-[![Latest Stable Version](https://poser.pugx.org/thefox/utilities/v/stable.png)](https://packagist.org/packages/thefox/utilities)
-[![Latest Unstable Version](https://poser.pugx.org/thefox/utilities/v/unstable.png)](https://packagist.org/packages/thefox/utilities)
-[![License](https://poser.pugx.org/thefox/utilities/license.png)](https://packagist.org/packages/thefox/utilities)
-
 ## Installation
 The preferred method of installation is via [Packagist](https://packagist.org/packages/thefox/utilities) and [Composer](https://getcomposer.org/). Run the following command to install the package and add it as a requirement to composer.json:
 
