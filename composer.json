@@ -2,20 +2,9 @@
 	"name": "thefox/utilities",
 	"description": "Collection of usefull PHP utilities.",
 	"type": "library",
-	"keywords": [
-		"utilities",
-		"base58",
-		"bin",
-		"binary",
-		"hex",
-		"hexadecimal",
-		"rand",
-		"random",
-		"debug",
-		"filesystem"
-	],
+	"keywords": [ "utilities", "base58", "bin", "binary", "hex", "hexadecimal", "rand", "random", "debug", "filesystem" ],
 	"homepage": "http://fox21.at",
-	"license": "GPLv3",
+	"license": "GPL-3.0",
 	"authors": [
 		{
 			"name": "Christian Mayer",
