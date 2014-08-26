@@ -30,6 +30,7 @@ class Bin{
 				($ascii & (1 << 0) ) > 0 
 				));
 		}
+		fwrite(STDOUT, "\n");
 	}
 	
 }
