@@ -4,10 +4,10 @@ use TheFox\Utilities\Bin;
 
 class BinTest extends PHPUnit_Framework_TestCase{
 	
-	/*public function testBin(){
-		#$this->markTestIncomplete('This test has not been implemented yet.');
-		#$this->expectOutputString('ddd xx    b b b b  b b b b');
-		#Bin::debugData('hello world');
-	}*/
+	public function testBin(){
+		$this->assertTrue(true);
+		Bin::debugData('hello world');
+		Bin::debugInt(123);
+	}
 	
 }

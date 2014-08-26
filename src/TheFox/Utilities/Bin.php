@@ -33,4 +33,20 @@ class Bin{
 		fwrite(STDOUT, "\n");
 	}
 	
+	public static function debugInt($num){
+		fwrite(STDOUT, "b b b b  b b b b   d\n");
+		fwrite(STDOUT, "--------------------\n");
+		fwrite(STDOUT, sprintf("%d %d %d %d  %d %d %d %d   %d\n",
+				($num & (1 << 7) ) > 0,
+				($num & (1 << 6) ) > 0,
+				($num & (1 << 5) ) > 0,
+				($num & (1 << 4) ) > 0,
+				($num & (1 << 3) ) > 0,
+				($num & (1 << 2) ) > 0,
+				($num & (1 << 1) ) > 0,
+				($num & (1 << 0) ) > 0,
+				$num
+		));
+	}
+	
 }
