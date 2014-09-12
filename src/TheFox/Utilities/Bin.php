@@ -47,6 +47,7 @@ class Bin{
 				($num & (1 << 0) ) > 0,
 				$num
 		));
+		fwrite(STDOUT, "\n");
 	}
 	
 }
