@@ -15,11 +15,17 @@ class Base58Test extends PHPUnit_Framework_TestCase{
 		$this->assertTrue(function_exists('bcadd'), 'bcadd not found.');
 	}
 	
+	/**
+	 * @expectedException PHPUnit_Framework_Error
+	 */
 	public function testEncode(){
 		$this->assertEquals('N', Base58::encode(21));
 		$this->assertEquals('2sidE', Base58::encode(21212121));
 	}
 	
+	/**
+	 * @expectedException PHPUnit_Framework_Error
+	 */
 	public function testDencode(){
 		$this->assertEquals(21, Base58::decode(Base58::encode(21)));
 		$this->assertEquals(21212121, Base58::decode(Base58::encode(21212121)));
