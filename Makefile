@@ -1,8 +1,11 @@
 
-DELETE = rm -rf
+RM = rm -rf
+CHMOD = chmod
 PHPCS = vendor/bin/phpcs
 PHPUNIT = vendor/bin/phpunit
 
+
+.PHONY: all install update tests test_phpcs test_phpunit clean
 
 all: install tests
 
@@ -14,7 +17,8 @@ update: composer.phar
 
 composer.phar:
 	curl -sS https://getcomposer.org/installer | php
-	./composer.phar install
+	$(CHMOD) 755 ./composer.phar
+	./composer.phar install --prefer-source --no-interaction --dev
 
 $(PHPCS): composer.phar
 
@@ -27,6 +31,6 @@ test_phpunit: $(PHPUNIT) phpunit.xml
 	$(PHPUNIT)
 
 clean:
-	$(DELETE) composer.lock composer.phar
-	$(DELETE) vendor/*
-	$(DELETE) vendor
+	$(RM) composer.lock composer.phar
+	$(RM) vendor/*
+	$(RM) vendor
