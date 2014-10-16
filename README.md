@@ -1,10 +1,14 @@
 # Utilities
-Collection of usefull PHP utilities.
+Collection of useful PHP utilities.
 
 ## Installation
 The preferred method of installation is via [Packagist](https://packagist.org/packages/thefox/utilities) and [Composer](https://getcomposer.org/). Run the following command to install the package and add it as a requirement to composer.json:
 
 	composer.phar require "thefox/utilities=~1.2"
+
+## Links
+- [Packagist Package](https://packagist.org/packages/thefox/utilities)
+- [PHPWeekly - Issue October 16, 2014](http://www.phpweekly.com/archive/2014-10-16.html)
 
 ## License
 Copyright (C) 2014 Christian Mayer <http://fox21.at>
