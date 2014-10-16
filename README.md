@@ -8,6 +8,7 @@ The preferred method of installation is via [Packagist](https://packagist.org/pa
 
 ## Links
 - [Packagist Package](https://packagist.org/packages/thefox/utilities)
+- [Travis CI Repository](https://travis-ci.org/TheFox/utilities)
 - [PHPWeekly - Issue October 16, 2014](http://www.phpweekly.com/archive/2014-10-16.html)
 
 ## License
