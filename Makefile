@@ -28,7 +28,7 @@ test_phpcs: $(PHPCS) vendor/thefox/phpcsrs/Standards/TheFox
 	$(PHPCS) -v -s --report=full --report-width=160 --standard=vendor/thefox/phpcsrs/Standards/TheFox src tests
 
 test_phpunit: $(PHPUNIT) phpunit.xml
-	$(PHPUNIT)
+	$(PHPUNIT) -v --debug
 
 clean:
 	$(RM) composer.lock composer.phar
