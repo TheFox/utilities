@@ -4,6 +4,7 @@
 	backupGlobals="true"
 	backupStaticAttributes="false"
 	bootstrap="vendor/autoload.php"
+	checkForUnintentionallyCoveredCode="true"
 	colors="true"
 	convertErrorsToExceptions="true"
 	convertNoticesToExceptions="true"
@@ -27,4 +28,9 @@
 			<file>tests/RandTest.php</file>
 		</testsuite>
 	</testsuites>
+	<filter>
+		<whitelist addUncoveredFilesFromWhitelist="true">
+			<directory suffix=".php">src</directory>
+		</whitelist>
+	</filter>
 </phpunit>
