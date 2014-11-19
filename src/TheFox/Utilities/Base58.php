@@ -2,40 +2,19 @@
 
 namespace TheFox\Utilities;
 
+/**
+ * @codeCoverageIgnore
+ */
 class Base58{
 	
 	const ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
 	
 	public static function encode($num){
 		trigger_error(__CLASS__.'->'.__FUNCTION__.'() is deprecated. Use stephenhill/base58 instead.', E_USER_NOTICE);
-		
-		$chars = static::ALPHABET;
-		$rv = '';
-		
-		while(bccomp($num, 0) == 1){
-			$dv = (string)bcdiv($num, '58', 0);
-			$rem = (integer)bcmod($num, '58');
-			$num = $dv;
-			$rv .= $chars[$rem];
-		}
-		
-		return strrev($rv);
 	}
 	
 	public static function decode($base58){
 		trigger_error(__CLASS__.'->'.__FUNCTION__.'() is deprecated. Use stephenhill/base58 instead.', E_USER_NOTICE);
-		
-		$chars = static::ALPHABET;
-		$rv = '0';
-		
-		$base58Len = strlen($base58);
-		for($i = 0; $i < $base58Len; $i++){
-			$current = (string)strpos($chars, $base58[$i]);
-			$rv = (string)bcmul($rv, '58', 0);
-			$rv = (string)bcadd($rv, $current, 0);
-		}
-		
-		return $rv;
 	}
 	
 }

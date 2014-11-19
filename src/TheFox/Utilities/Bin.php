@@ -4,6 +4,9 @@ namespace TheFox\Utilities;
 
 class Bin{
 	
+	/**
+	 * @codeCoverageIgnore
+	 */
 	public static function debugData($data){
 		$charset = '^°!"$%&/()=?+*#\'-_.:,;<> ';
 		$charset .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -17,8 +20,8 @@ class Bin{
 		for($pos = 0; $pos < $dataLen; $pos++){
 			$char = $data[$pos];
 			$ascii = ord($char);
-			
-			fwrite(STDOUT, sprintf((strpos($charset, $char) === false ? ' ' : $char)." %3d %02x    %d %d %d %d  %d %d %d %d\n",
+			$charOut = (strpos($charset, $char) === false ? ' ' : $char);
+			fwrite(STDOUT, $charOut.sprintf(" %3d %02x    %d %d %d %d  %d %d %d %d\n",
 				$ascii, $ascii,
 				($ascii & (1 << 7) ) > 0,
 				($ascii & (1 << 6) ) > 0,
@@ -27,8 +30,8 @@ class Bin{
 				($ascii & (1 << 3) ) > 0,
 				($ascii & (1 << 2) ) > 0,
 				($ascii & (1 << 1) ) > 0,
-				($ascii & (1 << 0) ) > 0 
-				));
+				($ascii & (1 << 0) ) > 0
+			));
 		}
 		fwrite(STDOUT, "\n");
 	}

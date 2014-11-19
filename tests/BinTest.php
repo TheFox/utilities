@@ -8,6 +8,7 @@ class BinTest extends PHPUnit_Framework_TestCase{
 		$this->assertTrue(true);
 		
 		Bin::debugData('hello world');
+		Bin::debugData('%s world');
 	}
 	
 	public function providerInt(){
