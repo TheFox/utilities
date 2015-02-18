@@ -2,7 +2,7 @@
 	"name": "thefox/utilities",
 	"description": "Collection of usefull PHP utilities.",
 	"type": "library",
-	"keywords": [ "utilities", "base58", "bin", "binary", "hex", "hexadecimal", "rand", "random", "debug", "filesystem" ],
+	"keywords": [ "utilities", "base58", "bin", "binary", "hex", "hexadecimal", "rand", "random", "debug", "leb128", "little", "endian" ],
 	"homepage": "http://fox21.at",
 	"license": "GPL-3.0",
 	"authors": [
