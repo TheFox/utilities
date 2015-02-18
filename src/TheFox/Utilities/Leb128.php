@@ -18,22 +18,22 @@ class Leb128{
 		return $buf;
 	}
 	
-	public static function decode($str){
-		$pos = 0;
+	public static function decode($str, &$x){
+		$len = 0;
 		$x = 0;
-		while(strlen($str)){
+		while($str){
 			$c = substr($str, 0, 1);
 			$c = ord($c);
 			$str = substr($str, 1);
 			
-			$x |= ($c & 0x7f) << (7 * $pos);
-			$pos++;
+			$x |= ($c & 0x7f) << (7 * $len);
+			$len++;
 			
 			if(!($c & 0x80)){
 				break;
 			}
 		}
-		return $x;
+		return $len;
 	}
 	
 }
