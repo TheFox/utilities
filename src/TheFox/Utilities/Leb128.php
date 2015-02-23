@@ -10,7 +10,9 @@ use InvalidArgumentException;
 
 class Leb128{
 	
-	// Unsigned Encode
+	/**
+	 * Unsigned Encode
+	 */
 	public static function uencode($x){
 		if($x < 0){
 			throw new InvalidArgumentException("Value can't be < 0. Use sencode().", 10);
@@ -28,7 +30,9 @@ class Leb128{
 		return $str;
 	}
 	
-	// Unsigned Decode
+	/**
+	 * Unsigned Decode
+	 */
 	public static function udecode($str, &$x, $maxlen = 16){
 		$len = 0;
 		$x = 0;
@@ -53,7 +57,9 @@ class Leb128{
 		return $len;
 	}
 	
-	// Signed Encode
+	/**
+	 * Signed Encode
+	 */
 	public static function sencode($x){
 		$buf = '';
 		$more = 1;
@@ -79,7 +85,9 @@ class Leb128{
 		return $buf;
 	}
 	
-	// Signed Decode
+	/**
+	 * Signed Decode
+	 */
 	public static function sdecode($str, &$x, $maxlen = 16, $intSize = 64){
 		$len = 0;
 		$x = 0;
@@ -107,7 +115,7 @@ class Leb128{
 		
 		// Sign bit of byte is 2nd high order bit (0x40)
 		if($shift < $intSize && ($char & 0x40)){
-			$x |= -(1 << $shift);
+			$x |= - (1 << $shift);
 		}
 		
 		return $len;
