@@ -6,12 +6,14 @@ VENDOR = vendor
 PHPCS = vendor/bin/phpcs
 PHPCS_STANDARD = vendor/thefox/phpcsrs/Standards/TheFox
 PHPCS_REPORT = --report=full --report-width=160
+PHPCS_SOURCE = src tests
+PHPCBF = vendor/bin/phpcbf
 PHPUNIT = vendor/bin/phpunit
 COMPOSER = ./composer.phar
 COMPOSER_DEV ?= --dev
 
 
-.PHONY: all install update test test_phpcs test_phpunit test_phpunit_cc clean
+.PHONY: all install update test test_phpcs test_phpunit test_phpunit_cc phpcbf_run clean
 
 all: install test
 
@@ -24,13 +26,16 @@ update: $(COMPOSER)
 test: test_phpcs test_phpunit
 
 test_phpcs: $(PHPCS) vendor/thefox/phpcsrs/Standards/TheFox
-	$(PHPCS) -v -s $(PHPCS_REPORT) --standard=$(PHPCS_STANDARD) src tests
+	$(PHPCS) -v -s $(PHPCS_REPORT) --standard=$(PHPCS_STANDARD) $(PHPCS_SOURCE)
 
 test_phpunit: $(PHPUNIT) phpunit.xml
 	TEST=true $(PHPUNIT) $(PHPUNIT_COVERAGE_HTML) $(PHPUNIT_COVERAGE_CLOVER)
 
 test_phpunit_cc: build
 	$(MAKE) test_phpunit PHPUNIT_COVERAGE_HTML="--coverage-html build/report"
+
+phpcbf_run:
+	$(PHPCBF) --standard=$(PHPCS_STANDARD) $(PHPCS_SOURCE)
 
 clean:
 	$(RM) composer.lock $(COMPOSER)
