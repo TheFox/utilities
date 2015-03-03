@@ -24,6 +24,7 @@
 			<file>tests/BinTest.php</file>
 			<file>tests/HexTest.php</file>
 			<file>tests/Leb128Test.php</file>
+			<file>tests/NumTest.php</file>
 			<file>tests/RandTest.php</file>
 		</testsuite>
 	</testsuites>
