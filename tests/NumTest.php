@@ -5,6 +5,8 @@ use TheFox\Utilities\Num;
 class NumTest extends PHPUnit_Framework_TestCase{
 	
 	public function testBe2le(){
+		$this->assertEquals(0x2, Num::be2le(0x2, 1));
+		$this->assertEquals(0x0200, Num::be2le(0x2, 2));
 		$this->assertEquals(0x41, Num::be2le(0x41, 1));
 		$this->assertEquals(0x4100, Num::be2le(0x41, 2));
 		$this->assertEquals(0x41, Num::be2le(0x4100, 2));
