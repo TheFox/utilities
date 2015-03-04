@@ -17,6 +17,15 @@ class Num{
 		return $rv;
 	}
 	
+	public static function be2leStr($n, $len){
+		$rv = '';
+		for($pos = 0; $pos < $len; $pos++){ 
+			$rv .= sprintf('%02x', $n & 0xff);
+			$n >>= 8;
+		}
+		return $rv;
+	}
+	
 	/**
 	 * Little Endian to Big Endian
 	 */
