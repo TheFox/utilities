@@ -53,4 +53,31 @@ class Bin{
 		fwrite(STDOUT, "\n");
 	}
 	
+	public static function debugInt32($num, $sizeByte = 4){
+		for($b = $sizeByte - 1; $b >= 0; $b--){
+			$shift = $b * 8;
+			$mask = 0xff << $shift; // Ich und meine Maske.
+			$numMasked = ($num & $mask) >> $shift;
+			fwrite(STDOUT, sprintf("%2x %2d %16x  %d %d %d %d  %d %d %d %d   %d\n",
+					(($b + 1) * 8) - 1,
+					$shift,
+					$mask,
+					($numMasked & (1 << 7) ) > 0,
+					($numMasked & (1 << 6) ) > 0,
+					($numMasked & (1 << 5) ) > 0,
+					($numMasked & (1 << 4) ) > 0,
+					($numMasked & (1 << 3) ) > 0,
+					($numMasked & (1 << 2) ) > 0,
+					($numMasked & (1 << 1) ) > 0,
+					($numMasked & (1 << 0) ) > 0,
+					$numMasked
+			));
+		}
+		fwrite(STDOUT, "\n");
+	}
+	
+	public static function debugInt64($num){
+		static::debugInt32($num, 8);
+	}
+	
 }

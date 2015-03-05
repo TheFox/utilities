@@ -5,7 +5,7 @@ namespace TheFox\Utilities;
 class Utilities{
 	
 	const NAME = 'Utilities';
-	const VERSION = '1.7.0';
+	const VERSION = '1.8.0-dev';
 	const RELEASE = 13;
 	
 }
