@@ -1,5 +1,9 @@
 <?php
 
+namespace TheFox\Test;
+
+use PHPUnit_Framework_TestCase;
+
 use TheFox\Utilities\Leb128;
 
 class Leb128Test extends PHPUnit_Framework_TestCase{

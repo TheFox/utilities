@@ -21,11 +21,11 @@
 	
 	<testsuites>
 		<testsuite name="My Test Suite">
-			<file>tests/BinTest.php</file>
-			<file>tests/HexTest.php</file>
-			<file>tests/Leb128Test.php</file>
-			<file>tests/NumTest.php</file>
-			<file>tests/RandTest.php</file>
+			<file>tests/TheFox/Test/BinTest.php</file>
+			<file>tests/TheFox/Test/HexTest.php</file>
+			<file>tests/TheFox/Test/Leb128Test.php</file>
+			<file>tests/TheFox/Test/NumTest.php</file>
+			<file>tests/TheFox/Test/RandTest.php</file>
 		</testsuite>
 	</testsuites>
 	<filter>

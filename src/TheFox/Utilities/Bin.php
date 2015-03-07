@@ -2,11 +2,11 @@
 
 namespace TheFox\Utilities;
 
+/**
+ * @codeCoverageIgnore
+ */
 class Bin{
 	
-	/**
-	 * @codeCoverageIgnore
-	 */
 	public static function debugData($data){
 		$charset = '^°!"$%&/()=?+*#\'-_.:,;<> ';
 		$charset .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';

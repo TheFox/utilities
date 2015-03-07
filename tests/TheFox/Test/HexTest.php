@@ -1,5 +1,9 @@
 <?php
 
+namespace TheFox\Test;
+
+use PHPUnit_Framework_TestCase;
+
 use TheFox\Utilities\Hex;
 
 class HexTest extends PHPUnit_Framework_TestCase{
