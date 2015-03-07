@@ -10,7 +10,7 @@ PHPCS_SOURCE = src tests
 PHPCBF = vendor/bin/phpcbf
 PHPUNIT = vendor/bin/phpunit
 COMPOSER = ./composer.phar
-COMPOSER_DEV ?= --dev
+COMPOSER_DEV ?= 
 
 
 .PHONY: all install update test test_phpcs test_phpunit test_phpunit_cc phpcbf_run clean
