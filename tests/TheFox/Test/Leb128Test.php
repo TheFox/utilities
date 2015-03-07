@@ -40,6 +40,14 @@ class Leb128Test extends PHPUnit_Framework_TestCase{
 		$this->assertEquals(5, $len);
 	}
 	
+	/**
+	 * @expectedException RuntimeException
+	 * @expectedExceptionCode 30
+	 */
+	public function testUencodeException30(){
+		$len = Leb128::sdecode(pack('H*', 'e58e26'), $x, 2);
+	}
+	
 	public function testUdecode(){
 		$len = Leb128::udecode(pack('H*', 'e58e26'), $x);
 		$this->assertEquals(624485, $x);
