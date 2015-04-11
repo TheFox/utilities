@@ -2,6 +2,9 @@
 
 namespace TheFox\Utilities;
 
+/**
+ * @codeCoverageIgnore
+ */
 class Html{
 	
 	public static function dump($data){
