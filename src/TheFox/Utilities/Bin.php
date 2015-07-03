@@ -13,8 +13,8 @@ class Bin{
 		$charset .= 'abcdefghijklmnopqrstuvwxyz';
 		$charset .= '0123456789';
 		
-		fwrite(STDOUT, "c ddd xx    b b b b  b b b b\n");
-		fwrite(STDOUT, "- --- --    ----------------\n");
+		#fwrite(STDOUT, "c ddd xx    b b b b  b b b b\n");
+		#fwrite(STDOUT, "- --- --    ----------------\n");
 		
 		$dataLen = strlen($data);
 		for($pos = 0; $pos < $dataLen; $pos++){
@@ -37,8 +37,8 @@ class Bin{
 	}
 	
 	public static function debugInt($num){
-		fwrite(STDOUT, "b b b b  b b b b   d\n");
-		fwrite(STDOUT, "--------------------\n");
+		#fwrite(STDOUT, "b b b b  b b b b   d\n");
+		#fwrite(STDOUT, "--------------------\n");
 		fwrite(STDOUT, sprintf("%d %d %d %d  %d %d %d %d   %d\n",
 				($num & (1 << 7) ) > 0,
 				($num & (1 << 6) ) > 0,
