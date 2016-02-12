@@ -21,6 +21,7 @@
 	
 	<testsuites>
 		<testsuite name="default">
+			<file>tests/TheFox/Test/ArrayCollectionTest.php</file>
 			<file>tests/TheFox/Test/BinTest.php</file>
 			<file>tests/TheFox/Test/HexTest.php</file>
 			<file>tests/TheFox/Test/Leb128Test.php</file>

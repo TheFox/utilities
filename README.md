@@ -7,6 +7,7 @@ Collection of useful PHP utilities.
 - Debug [binary](https://en.wikipedia.org/wiki/Binary_number) data.
 - Generate random data using [mt_rand()](http://php.net/manual/en/function.mt-rand.php).
 - Big/Little endian converter.
+- Array support.
 
 ## Installation
 The preferred method of installation is via [Packagist](https://packagist.org/packages/thefox/utilities) and [Composer](https://getcomposer.org/). Run the following command to install the package and add it as a requirement to composer.json:
