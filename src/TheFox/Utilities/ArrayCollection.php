@@ -74,7 +74,7 @@ class ArrayCollection extends DoctrineArrayCollection{
 	}
 	
 	public function avg(){
-		return($this->sum() / $this->count());
+		return ($this->sum() / $this->count());
 	}
 	
 	public function min(){
@@ -93,7 +93,7 @@ class ArrayCollection extends DoctrineArrayCollection{
 		$half = floor($count / 2);
 		if($this->count() % 2 == 0){
 			#return array($elements[$half-1], $elements[$half]);
-			return new static(array($elements[$half-1], $elements[$half]));
+			return new static(array($elements[$half - 1], $elements[$half]));
 		}
 		return $elements[$half];
 	}
