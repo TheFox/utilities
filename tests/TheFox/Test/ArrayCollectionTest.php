@@ -14,4 +14,10 @@ class ArrayCollectionTest extends PHPUnit_Framework_TestCase{
 		$this->assertEquals('d', $ar['c']);
 	}
 	
+	public function testKeys(){
+		$ar = new ArrayCollection(array('a' => 'b', 'c' => 'd', 'e' => 'f'));
+		
+		$this->assertEquals(array('a', 'c', 'e'), $ar->keys());
+	}
+	
 }
