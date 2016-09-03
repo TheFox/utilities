@@ -3,13 +3,13 @@
 	"description": "Collection of usefull PHP utilities.",
 	"type": "library",
 	"keywords": [ "utilities", "bin", "binary", "hex", "hexadecimal", "rand", "random", "debug", "leb128", "little", "big", "endian", "array" ],
-	"homepage": "http://fox21.at",
+	"homepage": "https://fox21.at",
 	"license": "GPL-3.0",
 	"authors": [
 		{
 			"name": "Christian Mayer",
 			"email": "christian@fox21.at",
-			"homepage": "http://fox21.at"
+			"homepage": "https://fox21.at"
 		}
 	],
 	"require": {

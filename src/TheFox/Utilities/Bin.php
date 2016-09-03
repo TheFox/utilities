@@ -2,9 +2,6 @@
 
 namespace TheFox\Utilities;
 
-/**
- * @codeCoverageIgnore
- */
 class Bin{
 	
 	public static function debugData($data){
