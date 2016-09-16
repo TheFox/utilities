@@ -4,6 +4,7 @@ Collection of useful PHP utilities.
 
 ## Features
 
+- PHP 7 compatible.
 - [Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) encoding.
 - [LEB128](https://en.wikipedia.org/wiki/LEB128) encoding.
 - Debug [binary](https://en.wikipedia.org/wiki/Binary_number) data.
