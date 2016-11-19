@@ -10,7 +10,6 @@ Collection of useful PHP utilities.
 - Debug [binary](https://en.wikipedia.org/wiki/Binary_number) data.
 - Generate random data using [mt_rand()](http://php.net/manual/en/function.mt-rand.php).
 - Big/Little endian converter.
-- Array support.
 
 ## Installation
 
