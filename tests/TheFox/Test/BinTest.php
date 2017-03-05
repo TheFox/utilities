@@ -3,7 +3,6 @@
 namespace TheFox\Test;
 
 use PHPUnit_Framework_TestCase;
-
 use TheFox\Utilities\Bin;
 
 class BinTest extends PHPUnit_Framework_TestCase{

@@ -1,0 +1,3 @@
+parameters:
+    excludes_analyse:
+        - %rootDir%/../../../src/TheFox/Utilities/ArrayCollection.php

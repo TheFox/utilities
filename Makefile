@@ -9,6 +9,7 @@ PHPCS_OPTIONS = -v -s --colors --report=full --report-width=160 --standard=$(PHP
 PHPCS_SOURCE = src tests
 PHPCBF = vendor/bin/phpcbf
 PHPUNIT = vendor/bin/phpunit
+PHPSTAN = vendor/bin/phpstan
 COMPOSER = ./composer.phar
 COMPOSER_OPTIONS ?= --no-interaction
 
@@ -25,7 +26,11 @@ update: $(COMPOSER)
 	$(COMPOSER) update
 
 .PHONY: test
-test: test_phpcs test_phpunit
+test: test_phpstan test_phpcs test_phpunit
+
+.PHONY: test_phpstan
+test_phpstan:
+	$(PHPSTAN) analyse --no-progress --level 5 --configuration phpstan.neon src tests
 
 .PHONY: test_phpcs
 test_phpcs: $(PHPCS) $(PHPCS_STANDARD)
