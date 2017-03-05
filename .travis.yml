@@ -8,6 +8,7 @@ php:
     - 7.1
 before_install:
     - php --version
+    - '[[ "${TRAVIS_PHP_VERSION:0:1}" = 5 ]] && sed -i "/phpstan.phpstan/d" composer.json || true'
 install:
     - make install
 before_script:
