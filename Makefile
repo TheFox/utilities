@@ -15,7 +15,7 @@ COMPOSER_OPTIONS ?= --no-interaction
 
 
 .PHONY: all
-all: install test
+all: install test_php7
 
 .PHONY: install
 install: $(VENDOR)
@@ -25,8 +25,11 @@ update: $(COMPOSER)
 	$(COMPOSER) selfupdate
 	$(COMPOSER) update
 
-.PHONY: test
-test: test_phpstan test_phpcs test_phpunit
+.PHONY: test_php5
+test_php5: test_phpcs test_phpunit
+
+.PHONY: test_php7
+test_php7: test_phpstan test_phpcs test_phpunit
 
 .PHONY: test_phpstan
 test_phpstan:
