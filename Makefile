@@ -9,9 +9,12 @@ PHPCS_OPTIONS = -v -s --colors --report=full --report-width=160 --standard=$(PHP
 PHPCS_SOURCE = src tests
 PHPCBF = vendor/bin/phpcbf
 PHPUNIT = vendor/bin/phpunit
-PHPSTAN = vendor/bin/phpstan
 COMPOSER = ./composer.phar
 COMPOSER_OPTIONS ?= --no-interaction
+
+# Local installed PHPStan while supporting PHP 5.
+# PHPStan requires PHP 7.
+PHPSTAN = ~/.composer/vendor/bin/phpstan
 
 
 .PHONY: all
@@ -25,11 +28,8 @@ update: $(COMPOSER)
 	$(COMPOSER) selfupdate
 	$(COMPOSER) update
 
-.PHONY: test_php5
-test_php5: test_phpcs test_phpunit
-
-.PHONY: test_php7
-test_php7: test_phpstan test_phpcs test_phpunit
+.PHONY: test
+test: test_phpcs test_phpunit
 
 .PHONY: test_phpstan
 test_phpstan:
