@@ -8,6 +8,12 @@ class Hex{
 	
 	const ALPHABET = '0123456789abcdef';
 	
+	/**
+	 * Encode an Integer to Hex string.
+	 * 
+	 * @param integer $dec
+	 * @return string
+	 */
 	public static function encode($dec){
 		$chars = static::ALPHABET;
 		$rv = '';
@@ -22,6 +28,12 @@ class Hex{
 		return strrev($rv);
 	}
 	
+	/**
+	 * Decode a Hex string to an Integer.
+	 * 
+	 * @param string $hex
+	 * @return integer
+	 */
 	public static function decode($hex){
 		$chars = static::ALPHABET;
 		$rv = '';
@@ -36,6 +48,13 @@ class Hex{
 		return $rv;
 	}
 	
+	/**
+	 * Encode a String to a Hex string.
+	 * 
+	 * @param string $data
+	 * @param string $separator
+	 * @return string
+	 */
 	public static function dataEncode($data, $separator = ''){
 		$rv = array();
 		
@@ -48,6 +67,12 @@ class Hex{
 		return join($separator, $rv);
 	}
 	
+	/**
+	 * Decode a Hex string to a String.
+	 * 
+	 * @param string $hex
+	 * @return string
+	 */
 	public static function dataDecode($hex){
 		$hexLen = strlen($hex);
 		if($hexLen % 2 != 0){

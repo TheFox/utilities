@@ -4,6 +4,10 @@ namespace TheFox\Utilities;
 
 class Rand{
 	
+	/**
+	 * @param integer $len
+	 * @return string
+	 */
 	public static function data($len = 16){
 		$rv = '';
 		for($n = 0; $n < $len; $n++){

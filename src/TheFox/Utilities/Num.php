@@ -6,6 +6,10 @@ class Num{
 	
 	/**
 	 * Big Endian to Little Endian
+	 *
+	 * @param integer $n
+	 * @param integer $len
+	 * @return string
 	 */
 	public static function be2le($n, $len){
 		$rv = 0;
@@ -17,6 +21,13 @@ class Num{
 		return $rv;
 	}
 	
+	/**
+	 * Big Endian to Little Endian Hex
+	 * 
+	 * @param integer $n
+	 * @param integer $len
+	 * @return string
+	 */
 	public static function be2leStr($n, $len){
 		$rv = '';
 		for($pos = 0; $pos < $len; $pos++){ 
@@ -28,6 +39,9 @@ class Num{
 	
 	/**
 	 * Little Endian to Big Endian
+	 *
+	 * @param integer $n
+	 * @return integer
 	 */
 	public static function le2be($n){
 		$rv = 0;

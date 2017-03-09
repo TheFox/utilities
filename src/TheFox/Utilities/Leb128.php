@@ -12,6 +12,9 @@ class Leb128{
 	
 	/**
 	 * Unsigned Encode
+	 * 
+	 * @param integer $x
+	 * @return string
 	 */
 	public static function uencode($x){
 		if($x < 0){
@@ -32,6 +35,11 @@ class Leb128{
 	
 	/**
 	 * Unsigned Decode
+	 *
+	 * @param string $str
+	 * @param integer &$x
+	 * @param integer $maxlen
+	 * @return integer
 	 */
 	public static function udecode($str, &$x, $maxlen = 16){
 		$len = 0;
@@ -59,6 +67,9 @@ class Leb128{
 	
 	/**
 	 * Signed Encode
+	 *
+	 * @param integer $x
+	 * @return string
 	 */
 	public static function sencode($x){
 		$buf = '';
@@ -87,6 +98,12 @@ class Leb128{
 	
 	/**
 	 * Signed Decode
+	 *
+	 * @param string $str
+	 * @param integer &$x
+	 * @param integer $maxlen
+	 * @param integer $intSize
+	 * @return integer
 	 */
 	public static function sdecode($str, &$x, $maxlen = 16, $intSize = 64){
 		$len = 0;
