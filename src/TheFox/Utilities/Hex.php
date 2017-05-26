@@ -14,7 +14,7 @@ class Hex
      * @param integer $dec
      * @return string
      */
-    public static function encode($dec)
+    public static function encode(int $dec): string
     {
         $chars = static::ALPHABET;
         $rv = '';
@@ -35,7 +35,7 @@ class Hex
      * @param string $hex
      * @return string
      */
-    public static function decode($hex)
+    public static function decode(string $hex): string
     {
         $chars = static::ALPHABET;
         $rv = '';
@@ -57,9 +57,9 @@ class Hex
      * @param string $separator
      * @return string
      */
-    public static function dataEncode($data, $separator = '')
+    public static function dataEncode(string $data, string $separator = ''): string
     {
-        $rv = array();
+        $rv = [];
 
         $format = '%02x';
         $dataLen = strlen($data);
@@ -76,7 +76,7 @@ class Hex
      * @param string $hex
      * @return string
      */
-    public static function dataDecode($hex)
+    public static function dataDecode(string $hex): string
     {
         $hexLen = strlen($hex);
         if ($hexLen % 2 != 0) {

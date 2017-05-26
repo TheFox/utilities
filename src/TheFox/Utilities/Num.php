@@ -11,7 +11,7 @@ class Num
      * @param integer $len
      * @return string
      */
-    public static function be2le($n, $len)
+    public static function be2le(int $n, int $len): int
     {
         $rv = 0;
         for ($pos = 0; $pos < $len; $pos++) {
@@ -29,7 +29,7 @@ class Num
      * @param integer $len
      * @return string
      */
-    public static function be2leStr($n, $len)
+    public static function be2leStr(int $n, int $len): int
     {
         $rv = '';
         for ($pos = 0; $pos < $len; $pos++) {
@@ -45,7 +45,7 @@ class Num
      * @param integer $n
      * @return integer
      */
-    public static function le2be($n)
+    public static function le2be(int $n): int
     {
         $rv = 0;
 

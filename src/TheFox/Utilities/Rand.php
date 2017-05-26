@@ -8,7 +8,7 @@ class Rand
      * @param integer $len
      * @return string
      */
-    public static function data($len = 16)
+    public static function data(int $len = 16): string
     {
         $rv = '';
         for ($n = 0; $n < $len; $n++) {

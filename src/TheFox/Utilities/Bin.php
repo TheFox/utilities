@@ -13,7 +13,7 @@ class Bin
      *
      * @param string $data
      */
-    public static function debugData($data)
+    public static function debugData(string $data)
     {
         $charset = '^°!"$%&/()=?+*#\'-_.:,;<> ';
         $charset .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -49,7 +49,7 @@ class Bin
      *
      * @param integer $num
      */
-    public static function debugInt($num)
+    public static function debugInt(int $num)
     {
         fwrite(STDOUT, sprintf("%d %d %d %d  %d %d %d %d   %d\n",
             ($num & (1 << 7)) > 0,
@@ -76,7 +76,7 @@ class Bin
      * @param integer $num
      * @param integer $sizeByte
      */
-    public static function debugInt32($num, $sizeByte = 4)
+    public static function debugInt32(int $num, int $sizeByte = 4)
     {
         for ($b = $sizeByte - 1; $b >= 0; $b--) {
             $shift = $b * 8;
@@ -103,7 +103,10 @@ class Bin
         fwrite(STDOUT, "\n");
     }
 
-    public static function debugInt64($num)
+    /**
+     * @param int $num
+     */
+    public static function debugInt64(int $num)
     {
         static::debugInt32($num, 8);
     }

@@ -17,16 +17,17 @@ class BinTest extends PHPUnit_Framework_TestCase
 
     public function providerInt()
     {
-        $rv = array();
-        $rv[] = array(123);
-        $rv[] = array(255);
+        $rv = [
+            [123],
+            [255],
+        ];
         return $rv;
     }
 
     /**
      * @dataProvider providerInt
      */
-    public function testInt($n)
+    public function testInt(int $n)
     {
         $this->assertTrue(true);
 

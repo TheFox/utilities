@@ -37,6 +37,8 @@ class Leb128Test extends PHPUnit_Framework_TestCase
      */
     public function testUencodeException20()
     {
+        $x = 0;
+
         $len = Leb128::udecode(pack('H*', '8080808004FF'), $x, 4);
         $this->assertEquals(1024 * 1024 * 1024, $x);
         $this->assertEquals(5, $len);
@@ -48,11 +50,15 @@ class Leb128Test extends PHPUnit_Framework_TestCase
      */
     public function testUencodeException30()
     {
+        $x = 0;
+
         $len = Leb128::sdecode(pack('H*', 'e58e26'), $x, 2);
     }
 
     public function testUdecode()
     {
+        $x = 0;
+
         $len = Leb128::udecode(pack('H*', 'e58e26'), $x);
         $this->assertEquals(624485, $x);
         $this->assertEquals(3, $len);
@@ -87,6 +93,8 @@ class Leb128Test extends PHPUnit_Framework_TestCase
 
     public function testSdecode()
     {
+        $x = 0;
+
         $len = Leb128::sdecode(pack('H*', 'e58e26'), $x);
         $this->assertEquals(624485, $x);
         $this->assertEquals(3, $len);

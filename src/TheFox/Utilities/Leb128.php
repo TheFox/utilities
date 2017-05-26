@@ -16,7 +16,7 @@ class Leb128
      * @param integer $x
      * @return string
      */
-    public static function uencode($x)
+    public static function uencode(int $x): string
     {
         if ($x < 0) {
             throw new InvalidArgumentException("Value can't be < 0. Use sencode().", 10);
@@ -31,6 +31,7 @@ class Leb128
             }
             $str .= chr($char);
         } while ($x);
+
         return $str;
     }
 
@@ -42,7 +43,7 @@ class Leb128
      * @param integer $maxlen
      * @return integer
      */
-    public static function udecode($str, &$x, $maxlen = 16)
+    public static function udecode(string $str, int &$x, int $maxlen = 16): int
     {
         $len = 0;
         $x = 0;
@@ -54,7 +55,7 @@ class Leb128
             $x |= ($char & 0x7f) << (7 * $len);
             $len++;
 
-            #Bin::debugInt($char);
+            //Bin::debugInt($char);
 
             if (($char & 0x80) == 0) {
                 break;
@@ -73,7 +74,7 @@ class Leb128
      * @param integer $x
      * @return string
      */
-    public static function sencode($x)
+    public static function sencode(int $x): string
     {
         $buf = '';
         $more = 1;
@@ -107,12 +108,12 @@ class Leb128
      * @param integer $intSize
      * @return integer
      */
-    public static function sdecode($str, &$x, $maxlen = 16, $intSize = 64)
+    public static function sdecode(string $str, int &$x, int $maxlen = 16, int $intSize = 64): int
     {
         $len = 0;
         $x = 0;
         $char = 0;
-        $shift = 0;
+        //$shift = 0;
         while ($str) {
             $char = substr($str, 0, 1);
             $char = ord($char);
