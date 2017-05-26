@@ -17,8 +17,7 @@
 		"doctrine/common": "~2.4"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "~4.8",
-		"thefox/phpcsrs": "~1.0"
+		"phpunit/phpunit": "~4.8"
 	},
 	"autoload": {
 		"psr-0": { "TheFox": ["src"] }

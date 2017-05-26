@@ -33,7 +33,7 @@ class Hex
      * Decode a Hex string to an Integer.
      *
      * @param string $hex
-     * @return integer
+     * @return string
      */
     public static function decode($hex)
     {
