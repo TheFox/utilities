@@ -18,7 +18,7 @@ PHPSTAN = ~/.composer/vendor/bin/phpstan
 
 
 .PHONY: all
-all: install test_php7
+all: install test
 
 .PHONY: install
 install: $(VENDOR)
@@ -29,15 +29,11 @@ update: $(COMPOSER)
 	$(COMPOSER) update
 
 .PHONY: test
-test: test_phpcs test_phpunit
+test: test_phpunit
 
 .PHONY: test_phpstan
 test_phpstan:
 	$(PHPSTAN) analyse --no-progress --level 5 --configuration phpstan.neon src tests
-
-.PHONY: test_phpcs
-test_phpcs: $(PHPCS) $(PHPCS_STANDARD)
-	$(PHPCS) $(PHPCS_OPTIONS) $(PHPCS_SOURCE)
 
 .PHONY: test_phpunit
 test_phpunit: $(PHPUNIT) phpunit.xml
