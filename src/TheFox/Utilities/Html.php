@@ -9,9 +9,7 @@ class Html{
 	 * @param integer $level
 	 */
 	public static function dump($data, $level = null){
-		print '<pre>';
-		\Doctrine\Common\Util\Debug::dump($data, $level);
-		print '</pre>';
+        trigger_error('Deprecated function.', E_USER_NOTICE);
 	}
 	
 }
