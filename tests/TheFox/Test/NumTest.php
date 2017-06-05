@@ -2,10 +2,10 @@
 
 namespace TheFox\Test;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use TheFox\Utilities\Num;
 
-class NumTest extends PHPUnit_Framework_TestCase
+class NumTest extends TestCase
 {
     public function testBe2le()
     {
