@@ -2,13 +2,11 @@
 
 namespace TheFox\Utilities;
 
-use Doctrine\Common\Collections\ArrayCollection as DoctrineArrayCollection;
-
 /**
  * @deprecated ArrayCollection
  * @codingStandardsIgnoreFile
  */
-class ArrayCollection extends DoctrineArrayCollection
+class ArrayCollection
 {
     public function __construct(array $elements = array())
     {
