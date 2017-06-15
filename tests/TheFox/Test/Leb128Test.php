@@ -2,7 +2,9 @@
 
 namespace TheFox\Test;
 
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
+use RuntimeException;
 use TheFox\Utilities\Leb128;
 
 class Leb128Test extends TestCase

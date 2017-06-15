@@ -2,6 +2,7 @@
 
 namespace TheFox\Test;
 
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use TheFox\Utilities\Hex;
 

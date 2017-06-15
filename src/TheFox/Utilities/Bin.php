@@ -110,4 +110,26 @@ class Bin
     {
         static::debugInt32($num, 8);
     }
+
+    /**
+     * Convert an integer to a Binary string.
+     * 
+     * For example, convert int(24) to string(00011000).
+     * 
+     * @param int $i
+     * @return string
+     */
+    public static function intToBinaryString(int $i): string
+    {
+        $rv = '';
+        $rv .= $i & (1 << 7) ? '1' : '0';
+        $rv .= $i & (1 << 6) ? '1' : '0';
+        $rv .= $i & (1 << 5) ? '1' : '0';
+        $rv .= $i & (1 << 4) ? '1' : '0';
+        $rv .= $i & (1 << 3) ? '1' : '0';
+        $rv .= $i & (1 << 2) ? '1' : '0';
+        $rv .= $i & (1 << 1) ? '1' : '0';
+        $rv .= $i & (1 << 0) ? '1' : '0';
+        return $rv;
+    }
 }
