@@ -39,7 +39,7 @@ class Leb128
      * Unsigned Decode
      *
      * @param string $str
-     * @param integer &$x
+     * @param integer $x
      * @param integer $maxlen
      * @return integer
      */
@@ -101,7 +101,7 @@ class Leb128
      * Signed Decode
      *
      * @param string $str
-     * @param integer &$x
+     * @param integer $x
      * @param integer $maxlen
      * @param integer $intSize
      * @return integer
