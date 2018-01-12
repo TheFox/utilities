@@ -10,4 +10,3 @@ before_script:
     - phpenv rehash
 script:
     - ./bin/test.sh
-    - ./bin/phpstan.sh
