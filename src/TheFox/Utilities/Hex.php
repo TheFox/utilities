@@ -16,16 +16,6 @@ class Hex
      */
     public static function encode(int $dec): string
     {
-        //if (!function_exists('bccomp')) {
-        //    throw new \RuntimeException('bccomp() not found.');
-        //}
-        //if (!function_exists('bcdiv')) {
-        //    throw new \RuntimeException('bcdiv() not found.');
-        //}
-        //if (!function_exists('bcmod')) {
-        //    throw new \RuntimeException('bcmod() not found.');
-        //}
-
         $chars = static::ALPHABET;
         $rv = '';
 
@@ -47,13 +37,6 @@ class Hex
      */
     public static function decode(string $hex): string
     {
-        //if (!function_exists('bcmul')) {
-        //    throw new \RuntimeException('bccomp() not found.');
-        //}
-        //if (!function_exists('bcadd')) {
-        //    throw new \RuntimeException('bcadd() not found.');
-        //}
-
         $chars = static::ALPHABET;
         $rv = '';
 
