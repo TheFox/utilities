@@ -11,7 +11,7 @@ RUN apt-get update && \
     apt-get clean
 
 # Install Composer.
-COPY --from=composer:1.5 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:1.6 /usr/bin/composer /usr/bin/composer
 
 # Root App folder
 RUN mkdir /app
