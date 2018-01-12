@@ -9,16 +9,18 @@ class Num
      *
      * @param integer $n
      * @param integer $len
-     * @return string
+     * @return int
      */
     public static function be2le(int $n, int $len): int
     {
         $rv = 0;
+        
         for ($pos = 0; $pos < $len; $pos++) {
             $rv <<= 8;
             $rv |= $n & 0xff;
             $n >>= 8;
         }
+        
         return $rv;
     }
 
@@ -29,13 +31,15 @@ class Num
      * @param integer $len
      * @return string
      */
-    public static function be2leStr(int $n, int $len): int
+    public static function be2leStr(int $n, int $len): string
     {
         $rv = '';
+        
         for ($pos = 0; $pos < $len; $pos++) {
             $rv .= sprintf('%02x', $n & 0xff);
             $n >>= 8;
         }
+        
         return $rv;
     }
 
@@ -53,8 +57,6 @@ class Num
             $rv <<= 8;
             $rv |= $n & 0xff;
             $n >>= 8;
-            #print "le2be: ".dechex($n)." ".dechex($rv)."\n";
-            #sleep(1);
         }
 
         return $rv;

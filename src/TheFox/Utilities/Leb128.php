@@ -55,8 +55,6 @@ class Leb128
             $x |= ($char & 0x7f) << (7 * $len);
             $len++;
 
-            //Bin::debugInt($char);
-
             if (($char & 0x80) == 0) {
                 break;
             }
@@ -78,15 +76,15 @@ class Leb128
     {
         $buf = '';
         $more = 1;
-        $negative = $x < 0;
+        //$negative = $x < 0;
         while ($more) {
             $char = $x & 0x7f;
             $x >>= 7;
 
-            /*if($negative){
-                $intSize = 64;
-                $x |= -(1 << ($intSize - 7));
-            }*/
+            //if($negative){
+            //    $intSize = 64;
+            //    $x |= -(1 << ($intSize - 7));
+            //}
 
             if (($x == 0 && ($char & 0x40) == 0) || ($x == -1 && ($char & 0x40))) {
                 $more = 0;

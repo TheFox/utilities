@@ -87,7 +87,6 @@ class Hex
         $rv = '';
         $hexLen = strlen($hex);
         for ($n = 0; $n < $hexLen; $n += 2) {
-            #print "n = $n\n";
             $rv .= chr(hexdec($hex[$n] . $hex[$n + 1]));
         }
 
