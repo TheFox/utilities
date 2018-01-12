@@ -23,4 +23,3 @@ else
     
     php composer.phar install ${COMPOSER_OPTS[@]}
 fi
-
