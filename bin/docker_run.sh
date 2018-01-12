@@ -15,8 +15,8 @@ docker run \
     --rm \
     --tty \
     --interactive \
-    --name utils \
-    --hostname utils \
+    --name ${IMAGE_NAME_SHORT} \
+    --hostname ${IMAGE_NAME_SHORT} \
     --volume "$PWD":/app \
     --env COMPOSER_AUTH="{\"github.com\":\"$GITHUB_API_TOKEN\"}" \
     ${IMAGE_NAME}
