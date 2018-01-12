@@ -60,7 +60,7 @@ class Leb128
             }
 
             if ($len >= $maxlen) {
-                throw new RuntimeException('Max length ' . $maxlen . ' reached.', 20);
+                throw new RuntimeException(sprintf('Max length %d reached.', $maxlen), 20);
             }
         }
         return $len;
@@ -126,7 +126,7 @@ class Leb128
             }
 
             if ($len >= $maxlen) {
-                throw new RuntimeException('Max length ' . $maxlen . ' reached.', 30);
+                throw new RuntimeException(sprintf('Max length %d reached.', $maxlen), 30);
             }
         }
 

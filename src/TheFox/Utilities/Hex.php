@@ -16,10 +16,20 @@ class Hex
      */
     public static function encode(int $dec): string
     {
+        //if (!function_exists('bccomp')) {
+        //    throw new \RuntimeException('bccomp() not found.');
+        //}
+        //if (!function_exists('bcdiv')) {
+        //    throw new \RuntimeException('bcdiv() not found.');
+        //}
+        //if (!function_exists('bcmod')) {
+        //    throw new \RuntimeException('bcmod() not found.');
+        //}
+
         $chars = static::ALPHABET;
         $rv = '';
 
-        while (bccomp($dec, 0) == 1) {
+        while (bccomp($dec, 0) === 1) {
             $dv = (string)bcdiv($dec, '16', 0);
             $rem = (integer)bcmod($dec, '16');
             $dec = $dv;
@@ -37,6 +47,13 @@ class Hex
      */
     public static function decode(string $hex): string
     {
+        //if (!function_exists('bcmul')) {
+        //    throw new \RuntimeException('bccomp() not found.');
+        //}
+        //if (!function_exists('bcadd')) {
+        //    throw new \RuntimeException('bcadd() not found.');
+        //}
+
         $chars = static::ALPHABET;
         $rv = '';
 
@@ -79,9 +96,9 @@ class Hex
     public static function dataDecode(string $hex): string
     {
         $hexLen = strlen($hex);
-        if ($hexLen % 2 != 0) {
+        if ($hexLen % 2 !== 0) {
             throw new InvalidArgumentException(
-                'Uneven number of hex string: ' . $hexLen, 1);
+                sprintf('Uneven number of hex string: %s', $hexLen), 1);
         }
 
         $rv = '';

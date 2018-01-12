@@ -15,12 +15,12 @@ class HexTest extends TestCase
 
         $this->assertEquals(21, Hex::decode(Hex::encode(21)));
         $this->assertEquals(21212121, Hex::decode(Hex::encode(21212121)));
-
+        
         $this->assertEquals('414243', Hex::dataEncode('ABC'));
         $this->assertEquals('41-42-43', Hex::dataEncode('ABC', '-'));
         $this->assertEquals('68656c6c6f20776f726c64', Hex::dataEncode('hello world'));
         $this->assertEquals('68-65-6c-6c-6f-20-77-6f-72-6c-64', Hex::dataEncode('hello world', '-'));
-
+        
         $this->assertEquals('1b', Hex::dataEncode("\x1b"));
         $this->assertEquals('7f', Hex::dataEncode("\x7f"));
     }
