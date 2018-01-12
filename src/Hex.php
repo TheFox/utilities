@@ -2,8 +2,6 @@
 
 namespace TheFox\Utilities;
 
-use InvalidArgumentException;
-
 class Hex
 {
     const ALPHABET = '0123456789abcdef';
@@ -80,7 +78,7 @@ class Hex
     {
         $hexLen = strlen($hex);
         if ($hexLen % 2 !== 0) {
-            throw new InvalidArgumentException(
+            throw new \InvalidArgumentException(
                 sprintf('Uneven number of hex string: %s', $hexLen), 1);
         }
 

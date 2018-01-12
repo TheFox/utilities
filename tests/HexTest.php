@@ -2,7 +2,6 @@
 
 namespace TheFox\Test;
 
-use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use TheFox\Utilities\Hex;
 
@@ -35,7 +34,7 @@ class HexTest extends TestCase
     }
 
     /**
-     * @expectedException InvalidArgumentException
+     * @expectedException \InvalidArgumentException
      * @expectedExceptionCode 1
      */
     public function testDataDecodeInvalidArgumentException()

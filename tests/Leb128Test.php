@@ -2,9 +2,7 @@
 
 namespace TheFox\Test;
 
-use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
-use RuntimeException;
 use TheFox\Utilities\Leb128;
 
 class Leb128Test extends TestCase
@@ -25,7 +23,7 @@ class Leb128Test extends TestCase
     }
 
     /**
-     * @expectedException InvalidArgumentException
+     * @expectedException \InvalidArgumentException
      * @expectedExceptionCode 10
      */
     public function testUencodeException10()
@@ -34,7 +32,7 @@ class Leb128Test extends TestCase
     }
 
     /**
-     * @expectedException RuntimeException
+     * @expectedException \RuntimeException
      * @expectedExceptionCode 20
      */
     public function testUencodeException20()
@@ -47,7 +45,7 @@ class Leb128Test extends TestCase
     }
 
     /**
-     * @expectedException RuntimeException
+     * @expectedException \RuntimeException
      * @expectedExceptionCode 30
      */
     public function testUencodeException30()

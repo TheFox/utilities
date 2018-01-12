@@ -5,9 +5,6 @@
 
 namespace TheFox\Utilities;
 
-use RuntimeException;
-use InvalidArgumentException;
-
 class Leb128
 {
     /**
@@ -19,7 +16,7 @@ class Leb128
     public static function uencode(int $x): string
     {
         if ($x < 0) {
-            throw new InvalidArgumentException("Value can't be < 0. Use sencode().", 10);
+            throw new \InvalidArgumentException("Value can't be < 0. Use sencode().", 10);
         }
 
         $str = '';
@@ -60,7 +57,7 @@ class Leb128
             }
 
             if ($len >= $maxlen) {
-                throw new RuntimeException(sprintf('Max length %d reached.', $maxlen), 20);
+                throw new \RuntimeException(sprintf('Max length %d reached.', $maxlen), 20);
             }
         }
         return $len;
@@ -126,7 +123,7 @@ class Leb128
             }
 
             if ($len >= $maxlen) {
-                throw new RuntimeException(sprintf('Max length %d reached.', $maxlen), 30);
+                throw new \RuntimeException(sprintf('Max length %d reached.', $maxlen), 30);
             }
         }
 
