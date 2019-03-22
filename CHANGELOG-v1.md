@@ -66,11 +66,3 @@
 ## v1.2.0
 
 - Deprecate Base58. Use https://github.com/stephen-hill/base58php ([on Packagist](https://packagist.org/packages/stephenhill/base58)) instead.
-
-## v1.1.1
-
-## v1.1.0
-
-## v1.0.1
-
-## v1.0.0
