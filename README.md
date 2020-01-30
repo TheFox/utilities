@@ -22,7 +22,9 @@ The project outlines as described in my blog post about [Open Source Software Co
 
 The preferred method of installation is via [Packagist](https://packagist.org/packages/thefox/utilities) and [Composer](https://getcomposer.org/). Run the following command to install the package and add it as a requirement to composer.json:
 
-	composer.phar require thefox/utilities
+```bash
+composer require thefox/utilities
+```
 
 ## Links
 
