@@ -2,6 +2,7 @@
 
 ## v2.1.0 [unreleased]
 
+- MIT License
 - Remove Travis CI support.
 
 ## v2.0.0
