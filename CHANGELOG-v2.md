@@ -1,5 +1,9 @@
 # Release Notes for Utilities v2.x
 
+## v2.1.0 [unreleased]
+
+- Remove Travis CI support.
+
 ## v2.0.0
 
 - Use PHPUnit 6.2.

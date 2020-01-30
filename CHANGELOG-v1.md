@@ -61,7 +61,7 @@
 
 ## v1.2.1
 
-- [Travis](https://travis-ci.org/TheFox/utilities) support added.
+- Travis support added.
 
 ## v1.2.0
 
